@@ -1,3 +1,12 @@
+Don't know why in VRef1.py, to limit line size = 60 by just write 60 bases every time, it doesn't work.
+But works by using 
+'''
+list = textwrap.wrap(sequence, width=60)
+for e in list:
+  print e
+  target2.write(e)
+'''
+
 About anchor:
 http://dialign.gobics.de/anchor/manual
 
