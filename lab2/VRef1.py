@@ -84,7 +84,7 @@ seq2 = extract(BPerg, ERGend, cache)
 rSeq2 = seq2[::-1]
 
 sequence = rSeq1 + rSeq2
-sequence.replace("\n", "")
+sequence.replace(" ", "")
 print "length is ", len(sequence)
 # print "seq is ", sequence
 # Build a fasta file by formatting TMPRSS2-ERG sequence:
@@ -93,6 +93,7 @@ list = textwrap.wrap(sequence, width=60)
 for e in list:
   print e
   target2.write(e)
+  target2.write("\n")
 #target2.write(sequence)
 #textwrap.fill(target2, width=60)
 
