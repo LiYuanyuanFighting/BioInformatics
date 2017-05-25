@@ -1,0 +1,59 @@
+About anchor:
+http://dialign.gobics.de/anchor/manual
+
+
+chimerascan_run.py path:
+/home/li/Documents/tools/bioInformatic/chimerascan-0.4.5/chimerascan
+
+python /opt/chimerascan-0.4.5/chimerascan/chimerascan_run.py
+path_to_indexfolder/INDEX/ /path_to_datasetfolder/dataset_mate1.fq
+/path_to_datasetfolder/dataset_mate2.fq
+/path_to_outputdirectory/chimera_out
+--->
+python /home/li/Documents/tools/bioInformatic/chimerascan-0.4.5/chimerascan/chimerascan_run.py INDEX/ dataset_mate1.fq dataset_mate2.fq chimera_out
+
+li@li-Inspiron-3437:~/Documents/bioInformatica/labs/lab2$ sudo python /home/li/Documents/tools/bioInformatic/chimerascan-0.4.5/chimerascan/chimerascan_run.py INDEX/ dataset_mate1.fq dataset_mate2.fq chimera_out
+2017-05-20 13:35:35,686 - root - INFO - Running chimerascan version 0.4.5
+2017-05-20 13:35:35,686 - root - INFO - ---------------------------------
+2017-05-20 13:35:35,727 - root - INFO - Writing run configuration to XML file: chimera_out/runconfig.xml
+2017-05-20 13:35:35,728 - root - INFO - Processing FASTQ files
+2017-05-20 13:35:38,770 - root - INFO - Aligning reads with bowtie
+2017-05-20 13:36:38,053 - root - INFO - Sorting aligned reads
+2017-05-20 13:36:38,155 - root - INFO - Indexing BAM file
+2017-05-20 13:36:38,158 - root - INFO - Profiling insert size distribution
+2017-05-20 13:36:38,186 - root - INFO - Insert size samples=132 mean=243.416667 std=190.411408 median=159 mode=89
+2017-05-20 13:36:38,186 - root - INFO - Trimming and re-aligning initially unmapped reads
+2017-05-20 13:42:35,376 - root - INFO - Classifying concordant and discordant read pairs
+2017-05-20 13:42:35,377 - root - INFO - Finding discordant read pair combinations
+2017-05-20 13:43:58,285 - root - INFO - Finished pairing reads
+2017-05-20 13:43:58,286 - root - INFO - Converting discordant reads to BEDPE format
+2017-05-20 13:43:58,427 - root - INFO - Sorting BEDPE file
+2017-05-20 13:43:58,439 - root - INFO - Nominating chimeras from discordant reads
+2017-05-20 13:44:02,547 - root - INFO - Filtering encompassing chimeras with few supporting reads
+2017-05-20 13:44:02,614 - root - INFO - Extracting breakpoint sequences from chimeras
+2017-05-20 13:44:02,665 - root - INFO - Building bowtie index of breakpoint spanning sequences
+2017-05-20 13:44:03,013 - root - INFO - Extracting encompassing reads that may extend past breakpoints
+2017-05-20 13:44:03,064 - root - INFO - Separating unmapped and single-mapping reads that may span breakpoints
+2017-05-20 13:44:06,485 - root - INFO - Extracting single-mapped reads that may span breakpoints
+2017-05-20 13:44:06,615 - root - INFO - Realigning encompassing reads to breakpoints
+2017-05-20 13:44:06,824 - root - INFO - Sorting/indexing encompassing/spanning alignments
+2017-05-20 13:44:06,880 - root - INFO - Realigning single-mapping reads to breakpoints
+2017-05-20 13:44:06,946 - root - INFO - Sorting/indexing single-mapping/spanning alignments
+2017-05-20 13:44:07,002 - root - INFO - Merging spanning read information
+2017-05-20 13:44:07,149 - root - INFO - Resolving ambiguous read mappings
+2017-05-20 13:44:07,469 - root - INFO - Filtering chimeras
+2017-05-20 13:44:07,559 - root - INFO - Filtering homologous chimeras
+# reads processed: 11858
+# reads with at least one reported alignment: 11858 (100.00%)
+# reads that failed to align: 0 (0.00%)
+Reported 46298 alignments to 1 output stream(s)
+2017-05-20 13:44:14,772 - root - INFO - Choosing best isoform for each chimera
+2017-05-20 13:44:14,967 - root - INFO - Writing chimeras to file chimera_out/chimeras.bedpe
+2017-05-20 13:44:15,175 - root - INFO - Finished run.
+
+Meaning of bedpe file:
+https://bioweb.pasteur.fr/docs/modules/bedtools/2.17.0/content/general-usage.html
+It should be TMPRSS2 involve in fusion with ERG
+
+>216960/1;pos=29;strand=+,GGCGGAGGCGGAGGGCGAGGGGCGGGGAGCGCCGCCTGGAGCGCGGCAGGAAG
+216860/1 is Read ID, pos=29 is the detected breakpoint on the read
