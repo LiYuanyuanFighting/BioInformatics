@@ -7,9 +7,14 @@ for e in list:
   target2.write(e)
 '''
 
-About anchor:
+**About anchor**:
 http://dialign.gobics.de/anchor/manual
 
+**About unmapped reads**  
+https://biology.stackexchange.com/questions/44032/what-are-unmapped-reads   
+
+**pair end sequencing**  
+[pair end sequencing](https://www.illumina.com/content/dam/illumina-marketing/images/technology/paired-end-sequencing-figure.gif)
 
 chimerascan_run.py path:
 /home/li/Documents/tools/bioInformatic/chimerascan-0.4.5/chimerascan
