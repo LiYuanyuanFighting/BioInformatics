@@ -16,6 +16,9 @@ https://biology.stackexchange.com/questions/44032/what-are-unmapped-reads
 **pair end sequencing**  
 [pair end sequencing](https://www.illumina.com/content/dam/illumina-marketing/images/technology/paired-end-sequencing-figure.gif)
 
+**mates, pair reads with bowtie**  
+http://bowtie-bio.sourceforge.net/bowtie2/manual.shtml
+
 chimerascan_run.py path:
 /home/li/Documents/tools/bioInformatic/chimerascan-0.4.5/chimerascan
 
