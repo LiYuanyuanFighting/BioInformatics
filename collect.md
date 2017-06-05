@@ -12,3 +12,5 @@ In fact, I would advise you to always try both approaches on all of your imbalan
 
 Consider testing under-sampling when you have an a lot data (tens- or hundreds of thousands of instances or more)
 Consider testing over-sampling when you don’t have a lot of data (tens of thousands of records or less)  
+
+Oversampling randomly replicates minority instances to increase their population. Undersampling randomly downsamples the majority class. Some data scientists (naively) think that oversampling is superior because it results in more data, whereas undersampling throws away data. But keep in mind that replicating data is not without consequence—since it results in duplicate data, it makes variables appear to have lower variance than they do. The positive consequence is that it duplicates the number of errors: if a classifier makes a false negative error on the original minority data set, and that data set is replicated five times, the classifier will make six errors on the new set. Conversely, undersampling can make the independent variables look like they have a higher variance than they do.  
