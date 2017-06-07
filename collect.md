@@ -1,3 +1,15 @@
+**AUC ROC**  
+When using normalized units, the area under the curve (often referred to as simply the AUC) is equal to the probability that a classifier will rank a randomly chosen positive instance higher than a randomly chosen negative one (assuming 'positive' ranks higher than 'negative')  
+在比較不同的分類模型時，可以將每個模型的ROC曲線都畫出來，比較曲線下面積做為模型優劣的指標。  
+ROC曲線下方的面積（英语：Area under the Curve of ROC (AUC ROC)），其意義是：
+
+    因為是在1x1的方格裡求面積，AUC必在0~1之間。
+    假設閾值以上是陽性，以下是陰性；
+    若隨機抽取一個陽性樣本和一個陰性樣本，分類器正確判斷陽性樣本的值高於陰性樣本之機率 = A U C {\displaystyle =AUC} {\displaystyle =AUC}[1]。
+    簡單說：AUC值越大的分類器，正確率越高。
+[reference](https://zh.wikipedia.org/wiki/ROC%E6%9B%B2%E7%BA%BF)  
+
+
 **To reduce imbalance**  
 You can change the dataset that you use to build your predictive model to have more balanced data.
 
