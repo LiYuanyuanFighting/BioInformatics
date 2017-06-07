@@ -1,4 +1,33 @@
-Don't know why in VRef1.py, to limit line size = 60 by just write 60 bases every time, it doesn't work.
+1) Extract thanks to samtools view program all the mates
+mapped on to TMPRSS2 and ERG not spanning the fusion
+breakpoint.
+Answer:samtools view out_sorted.bam vrTE:1-23036 vrTE:23036-304791 >outNoSpanning.sam
+  (View program:
+samtools view ref:start-end input output
+For the first partner gene:
+- ref is the name of your virtual reference
+- start is 1 and end is the BPposition-readlength
+For the second partner gene:
+- ref is the name of your virtual reference
+- start is BPposition and end is the last coordinate of your virtual reference)  
+
+2)Discuss the ratios iso_5p/miRNA calculated: Is there a prevalence of iso_5p or miRNA? How  
+this finding impacts on miRNA targeting?  
+In my output file, mostly the ratios are greater than 1, so it means there's a prevalence of  
+iso_5p, for the impacts on miRNA targeting, it should emphasis more on the isoforms of miRNA  
+or ..., what should I answer better?    
+Answer:5' isomiRs account for the loss of miRNA:mRNA interaction sites. For this reason   
+this result impacts on the targeting activity of the miRNA under investigation.
+
+Don't know whView program:
+samtools view ref:start-end input output
+For the first partner gene:
+- ref is the name of your virtual reference
+- start is 1 and end is the BPposition-readlength
+For the second partner gene:
+- ref is the name of your virtual reference
+- start is BPposition and end is the last coordinate of your virtual reference  
+y in VRef1.py, to limit line size = 60 by just write 60 bases every time, it doesn't work.
 But works by using 
 '''
 list = textwrap.wrap(sequence, width=60)
