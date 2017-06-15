@@ -35,3 +35,8 @@ GridSearchCV(cv=None,...
 RandomForestClassifier  
 A random forest is a meta estimator that fits a number of decision tree classifiers on various sub-samples of the dataset and use averaging to improve the predictive accuracy and control over-fitting. The sub-sample size is always the same as the original input sample size but the samples are drawn with replacement if bootstrap=True (default).
 By default, the GridSearchCV uses a 3-fold cross-validation. However, if it detects that a classifier is passed, rather than a regressor, it uses a stratified 3-fold.  
+
+Nearest cleaning rule(NCR)  
+https://books.google.de/books?id=Swq7BQAAQBAJ&pg=PA216&lpg=PA216&dq=Neighbourhood+Cleaning+Rule&source=bl&ots=cZ8VcP096y&sig=YVTWmag05Lu8VDHPUf-aROe-o7o&hl=zh-CN&sa=X&ved=0ahUKEwigpNn8-L_UAhXLfRoKHXbxBvIQ6AEIcTAN#v=onepage&q=Neighbourhood%20Cleaning%20Rule&f=false  
+The problem is not SMOTE since it is generating the data one used alone.
+However, I think that the issue is coming from your sample generation and more precisely by setting the number of dimension to 1000. In this high-dimensional space, SMOTE is probably always generating at least one sample which is close to the other class. Therefore, the rule of the ENN for the selection which is by default 'all' will actually remove all the samples from this class. you could enlarge the number of neighbors in the ENN and set the selection kind to mode. But in all the cases I am not convince about that high dimensional feature space.
