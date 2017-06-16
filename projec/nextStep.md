@@ -1,3 +1,5 @@
+1st try feature removing https://miguelmalvarez.com/2015/02/23/python-and-kaggle-feature-selection-multiple-models-and-grid-search/
+
 It seems that I need to do feature selection for each fold, this can be  
 done in cross validation, the parameters of cross validation can be set   
 inside GridSearchCV.  
