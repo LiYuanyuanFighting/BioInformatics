@@ -1,3 +1,8 @@
+Finally, return to the original: 
+do feature selection for all datasets before spliting, otw the indices won't be correct:
+pred = clf.best_estimator_.predict(Xtest[Xtrain.columns])  
+But for balance funtion, it is used only for training set
+
 Integrate balance function, feature selection, randomForestClassifier inside pipeline.  
 
 Just do balance and feature processing for training set, not for testing set
