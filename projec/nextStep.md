@@ -1,5 +1,15 @@
 Using cross_val_score, no need to use train_test_split(), because cross_validation itself
-already split data into folds
+already split data into folds. What i done in the project is called hold-out-set
+
+What I used:  
+clf = RandomForestClassifier()
+steps = [(“my_classifier”, clf)]
+parameters = dict{my_classifier__min_samples_split=[2, 3, 4, 5]}  ###“my_classifier” is the name of the random forest classifier in the steps list; min_samples_split is the associated sklearn parameter that I want to vary
+pipe = Pipeline(steps)
+cv = GridSearchCV( pipe, param_grid = parameters)  
+https://www.civisanalytics.com/blog/workflows-in-python-using-pipeline-and-gridsearchcv-for-more-compact-and-comprehensive-code/
+
+? should use score.mean or best_score
 
 1st try feature removing https://miguelmalvarez.com/2015/02/23/python-and-kaggle-feature-selection-multiple-models-and-grid-search/
 
