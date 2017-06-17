@@ -1,3 +1,7 @@
+Integrate balance function, feature selection, randomForestClassifier inside pipeline.  
+
+Just do balance and feature processing for training set, not for testing set
+
 Using cross_val_score, no need to use train_test_split(), because cross_validation itself
 already split data into folds. What i done in the project is called hold-out-set
 
