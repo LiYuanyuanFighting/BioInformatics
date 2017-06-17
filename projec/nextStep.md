@@ -1,3 +1,6 @@
+X: features , if 500 samples, 1000 features for each sample, then 1000 columns, 500 rows
+y: response, 500 rows, 1 column
+
 Finally, return to the original: 
 do feature selection for all datasets before spliting, otw the indices won't be correct:
 pred = clf.best_estimator_.predict(Xtest[Xtrain.columns])  
