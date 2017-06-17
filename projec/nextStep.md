@@ -1,5 +1,5 @@
 Using cross_val_score, no need to use train_test_split(), because cross_validation itself
-already split data into test and train
+already split data into folds
 
 1st try feature removing https://miguelmalvarez.com/2015/02/23/python-and-kaggle-feature-selection-multiple-models-and-grid-search/
 
