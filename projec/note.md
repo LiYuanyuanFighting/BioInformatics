@@ -1,3 +1,9 @@
+feature_selection_simple_20%
+feature_selection_simple_20%(No test.transform(Xtest))
+The two use Xtest = test.transform(Xtest) compared with pred = clf.best_estimator_.predict(Xtest[Xtrain.columns])
+the results are very different, because with transorm(), Xtest will be reduced to the selected features. Without
+transform() but ...predict(Xtest[Xtrain.columns]), it will just use all features ..?
+
 Regression: the output variable takes continuous values.
 
 Classification: the output variable takes class labels.
